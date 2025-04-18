@@ -108,7 +108,6 @@ body {
 input {
 	font-size: 16px;
 	font-size: max(16px, 1em);
-
 	padding: 0.25em 0.5em;
 	background-color: #fff;
 	border: 2px solid #6d9dc5;
@@ -144,8 +143,16 @@ input:focus {
 .gallery-img img {
 	object-fit: contain;
 	border-radius: 0.5rem;
-	box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
-	-webkit-box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
-	-moz-box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
+	transition: 300ms all ease-in-out;
 	margin: 0 auto;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-img img:hover {
+	box-shadow: 0px 0px 3px 3px rgba(109, 157, 197, 1);
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(109, 157, 197, 1);
+	-moz-box-shadow: 0px 0px 3px 4px rgba(109, 157, 197, 1);
+	transform: scale(1.02);
 }
