@@ -73,11 +73,12 @@ textarea,
 select {
 	font-family: inherit;
 	font-size: inherit;
+	appearance: none;
 }
 
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-	min-height: 10em;
+input {
+	border: none;
+	outline: none;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
@@ -88,40 +89,71 @@ textarea:not([rows]) {
 /* Custom styles */
 body {
 	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .body-wrapper {
-	padding: 4rem;
+	padding: 2rem 0;
 	height: 90vh;
-	width: 70vw;
+	width: 90vw;
 	margin: 0 auto;
 }
 
-form {
+.input-container {
 	display: flex;
 	justify-content: center;
 	margin-block-end: 2rem;
 }
 
 input {
-	height: 3rem;
+	font-size: 16px;
+	font-size: max(16px, 1em);
+
+	padding: 0.25em 0.5em;
+	background-color: #fff;
+	border: 2px solid #6d9dc5;
+	border-radius: 4px;
 	width: 60%;
+	line-height: 1;
+	height: 3rem;
+	transition: 180ms box-shadow ease-in-out;
+}
+
+input:focus {
+	outline: 3px solid transparent;
+	border-color: #119da4;
+	box-shadow: 0px 0px 3px 3px rgba(17, 157, 164, 0.5);
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(17, 157, 164, 0.5);
+	-moz-box-shadow: 0px 0px 3px 4px rgba(17, 157, 164, 0.5);
 }
 
 .gallery {
 	display: grid;
 	padding: 0;
 	margin: 0 auto;
-	grid-template-columns: repeat(auto-fit, minmax(23ch, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 23ch), 1fr));
 	gap: 2rem;
+	justify-items: center;
+	width: 100%;
 }
 
-.gallery img {
+.gallery-img {
+	width: 100%;
+}
+
+.gallery-img img {
 	width: 100%;
 	object-fit: cover;
-	height: 12rem;
 	border-radius: 0.5rem;
-	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.34);
-	-webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.34);
-	-moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.34);
+	box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
+	-webkit-box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
+	-moz-box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
+	margin: 0 auto;
+}
+
+@supports (aspect-ratio: 1) {
+	.gallery-img img {
+		aspect-ratio: var(--gallery-aspect-ratio);
+		height: auto;
+	}
 }
