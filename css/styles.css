@@ -142,18 +142,10 @@ input:focus {
 }
 
 .gallery-img img {
-	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	border-radius: 0.5rem;
 	box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
 	-webkit-box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
 	-moz-box-shadow: 1px 1px 5px 1px rgba(17, 157, 164, 0.34);
 	margin: 0 auto;
-}
-
-@supports (aspect-ratio: 1) {
-	.gallery-img img {
-		aspect-ratio: var(--gallery-aspect-ratio);
-		height: auto;
-	}
 }
