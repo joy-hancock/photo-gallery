@@ -9,16 +9,22 @@
 		<link
 			rel="stylesheet"
 			href="css/styles.css" />
+		<link
+			rel="stylesheet"
+			href="css/baguetteBox.min.css" />
 	</head>
 	<body>
 		<div class="body-wrapper">
-			<form action="">
+			<div class="input-container">
 				<input
-					type="search"
+					id="gallerySearch"
 					placeholder="Search" />
-			</form>
-			<div class="gallery">
+			</div>
+			<div
+				class="gallery"
+				id="gallery">
 				<a
+					class="gallery-img"
 					href="photos/01.jpg"
 					data-caption="I love hay bales. Took this snap on a drive through the countryside past some straw fields."
 					><img
@@ -27,66 +33,77 @@
 				/></a>
 
 				<a
+					class="gallery-img"
 					href="photos/02.jpg"
 					data-caption="The lake was so calm today. We had a great view of the snow on the mountains from here."
 					><img
 						src="photos/thumbnails/02.jpg"
 						alt="A lake surrounded by mountains" /></a
 				><a
+					class="gallery-img"
 					href="photos/03.jpg"
 					data-caption="I hiked to the top of the mountain and got this picture of the canyon and trees below."
 					><img
 						src="photos/thumbnails/03.jpg"
 						alt="Mountaintop view of canyon and trees." /></a
 				><a
+					class="gallery-img"
 					href="photos/04.jpg"
 					data-caption="It was amazing to see an iceberg up close, it was so cold but didn’t snow today."
 					><img
 						src="photos/thumbnails/04.jpg"
 						alt="Icebergs" /></a
 				><a
+					class="gallery-img"
 					href="photos/05.jpg"
 					data-caption="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."
 					><img
 						src="photos/thumbnails/05.jpg"
 						alt="Red cliffs from the perspective of a valley floor." /></a
 				><a
+					class="gallery-img"
 					href="photos/06.jpg"
 					data-caption="Fall is coming, I love when the leaves on the trees start to change color."
 					><img
 						src="photos/thumbnails/06.jpg"
 						alt="Forest with leaves changing color in the fall." /></a
 				><a
+					class="gallery-img"
 					href="photos/07.jpg"
 					data-caption="I drove past this plantation yesterday, everything is so green!"
 					><img
 						src="photos/thumbnails/07.jpg"
 						alt="Plantation with mountains in the background." /></a
 				><a
+					class="gallery-img"
 					href="photos/08.jpg"
 					data-caption="My summer vacation to the Oregon Coast. I love the sandy dunes!"
 					><img
 						src="photos/thumbnails/08.jpg"
 						alt="Desert dunes on Oregon coast." /></a
 				><a
+					class="gallery-img"
 					href="photos/09.jpg"
 					data-caption="We enjoyed a quiet stroll down this countryside lane."
 					><img
 						src="photos/thumbnails/09.jpg"
 						alt="Tree canopy over small country lane." /></a
 				><a
+					class="gallery-img"
 					href="photos/10.jpg"
 					data-caption="Sunset at the coast! The sky turned a lovely shade of orange."
 					><img
 						src="photos/thumbnails/10.jpg"
 						alt="Sunset at coast with cliffs and forest." /></a
 				><a
+					class="gallery-img"
 					href="photos/11.jpg"
 					data-caption="I did a tour of a cave today and the view of the landscape below was breathtaking."
 					><img
 						src="photos/thumbnails/11.jpg"
 						alt="View of landscape from inside a cave entrance." /></a
 				><a
+					class="gallery-img"
 					href="photos/12.jpg"
 					data-caption="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
 					><img
@@ -95,7 +112,7 @@
 				/></a>
 			</div>
 		</div>
-
+		<script src="js/baguetteBox.min.js"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
